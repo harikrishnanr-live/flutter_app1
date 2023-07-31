@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './widgets/row_column.dart';
 
 void main() {
   runApp(FirstApp());
@@ -9,20 +10,6 @@ class FirstApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'First App',
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text("Top Bar"),
-              centerTitle: true,
-              backgroundColor: Colors.grey,
-              leading: IconButton(onPressed: (){}, icon: Icon(Icons.home)),
-              actions: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-                IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz_outlined))],
-            ),
-            body: Center(
-              child: Text("Hello World", style: TextStyle(fontSize: 30)),
-            )));
+    return MaterialApp(title: 'First App', home: RowColumnWidget());
   }
 }
